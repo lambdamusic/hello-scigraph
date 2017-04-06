@@ -37,7 +37,7 @@ es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
 store = SPARQLStore("http://localhost:7200/repositories/scigraph-2016")
 g = ConjunctiveGraph(store=store)
 
-ES_INDEX_NAME = "sg-2017-03-24"
+ES_INDEX_NAME = "hello-scigraph"
 MAX_TIMEOUT = 60 # seconds
 
 
