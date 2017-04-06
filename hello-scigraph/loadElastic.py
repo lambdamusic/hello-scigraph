@@ -1,14 +1,20 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+"""
+Creates an elasticsearch index with denormalized article data coming from GraphDB
 
-# load elasticsearch index with denormalized article data coming from a graphDB database
+Usage:
+
+> python -m hello-scigraph.loadElastic
+
+"""
+
 
 from __future__ import print_function
 import json, sys, time
 from rdflib.plugins.stores.sparqlstore import SPARQLStore
 from rdflib import Graph, ConjunctiveGraph
-# note: pip install elasticsearch
 from elasticsearch import Elasticsearch
 
 import logging
@@ -23,7 +29,7 @@ try:
     from .queries import *
     from .timeout import *
 except:
-    print("TIP: run the script `python -m src.loadElasticSearch` from outside package folder")
+    print("TIP: run the script `python -m hello-scigraph.loadElasticSearch` from outside package folder")
     sys.exit(0)
 
 
@@ -49,7 +55,6 @@ def extract_article_info(row, i):
     print("Adding article [%d] to index: %s ... " % (i, ES_INDEX_NAME))
     # note: if not including a context, you must use
     # json.loads(json_str)[0] extracts the dict (from a top level list)
-    # otherwise ES complains..
     es.index(index=ES_INDEX_NAME, doc_type='articles', id=articleUri, body=json.loads(json_str))
     print("======")
 

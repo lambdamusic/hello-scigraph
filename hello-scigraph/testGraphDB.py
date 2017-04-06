@@ -33,8 +33,7 @@ except:
 
 MAX_TIMEOUT = 10 # seconds
 
-# SPARQL_ENDPOINT = "http://localhost:7200/repositories/scigraph-2016"
-SPARQL_ENDPOINT = "http://10.230.14.128:7200/repositories/Scigraph"
+SPARQL_ENDPOINT = "http://localhost:7200/repositories/scigraph-2016"
 
 
 def main():

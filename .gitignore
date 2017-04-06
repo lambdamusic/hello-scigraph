@@ -38,3 +38,5 @@ nosetests.xml
 
 # mac stuff
 .DS_Store
+
+PRIVATE.md

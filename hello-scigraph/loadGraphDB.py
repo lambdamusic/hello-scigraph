@@ -5,7 +5,9 @@
 """
 Load a folder containin RDF files into GraphDB from the command line
 
-python -m hello-scigraph.loadGraphDB ~/path/to/scigraph-downloads/
+Usage:
+
+> python -m hello-scigraph.loadGraphDB ~/path/to/scigraph-downloads/
 
 """
 
