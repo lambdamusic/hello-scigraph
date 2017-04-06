@@ -40,3 +40,4 @@ nosetests.xml
 .DS_Store
 
 PRIVATE.md
+*.log
